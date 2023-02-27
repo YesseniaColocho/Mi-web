@@ -1,0 +1,155 @@
+// https://stackoverflow.com/questions/2436749/how-to-add-multiple-font-files-for-the-same-font
+// https://support.fontspring.com/hc/en-us/articles/10244250193691
+
+
+
+////////// Philosopher //////////
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("fonts/Philosopher-Regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("fonts/Philosopher-Bold.ttf") format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("fonts/Philosopher-Italic.ttf") format('truetype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("fonts/Philosopher-BoldItalic.ttf") format('truetype');
+    font-style: italic;
+    font-weight: bold;
+}
+
+////////// Gontserratr //////////
+
+@font-face {
+    font-family: "Gontserrat";
+    src: url("fonts/Gontserrat-Regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gontserrat";
+    src: url("fonts/Gontserrat-Bold.ttf") format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Gontserrat";
+    src: url("fonts/Gontserrat-Italic.ttf") format('truetype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+////////// Renogare //////////
+
+@font-face {
+    font-family: "Renogare";
+    src: url("fonts/Renogare-Regular.otf") format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+////////// Altone //////////
+
+@font-face {
+    font-family: "Altone";
+    src: url("fonts/AltoneTrial-Regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Altone";
+    src: url("fonts/AltoneTrial-Bold.ttf") format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Altone";
+    src: url("fonts/AltoneTrial-RegularOblique.ttf") format('truetype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+////////// CreatoDisplay //////////
+
+@font-face {
+    font-family: "CreatoDisplay";
+    src: url("fonts/CreatoDisplay-Regular.otf") format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "CreatoDisplay";
+    src: url("fonts/CreatoDisplay-RegularItalic.otf") format('opentype');
+    font-style: italic;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "CreatoDisplay";
+    src: url("fonts/CreatoDisplay-Medium.otf") format('opentype');
+    font-style: medium;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "CreatoDisplay";
+    src: url("fonts/CreatoDisplay-Bold.otf") format('opentype');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "CreatoDisplay";
+    src: url("fonts/CreatoDisplay-BoldItalic.otf") format('opentype');
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "CreatoDisplay";
+    src: url("fonts/CreatoDisplay-Black.otf/Renogare-Regular.otf") format('opentype');
+    font-style: normal;
+    font-weight: bolder;
+}
+
+////////// Galyon //////////
+@font-face {
+    font-family: "Galyon";
+    src: url("fonts/Galyon-Book.otf") format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Galyon";
+    src: url("fonts/Galyon-Book-Italic.otf") format('opentype');
+    font-style: italic;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Galyon";
+    src: url("fonts/Galyon-Bold.otf") format('opentype');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Galyon";
+    src: url("fonts/Galyon-Bold-Italic.otf") format('opentype');
+    font-style: italic;
+    font-weight: bold;
+}
