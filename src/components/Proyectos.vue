@@ -124,5 +124,6 @@ export default {
 }
 .descripcion{
     font-size: 14px;
+    padding: 0 20px 20px 0;
 }
 </style>
