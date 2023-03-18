@@ -3,22 +3,31 @@
         <div class="row">
 
             <div class="nombre col-6">
-                <h1>Yessenia Colocho</h1>
+                <h1><a href="/"> Yessenia Colocho </a></h1>
             </div>
 
-            <nav class="secciones col-6">
+            <nav v-if="viewName === 'home'" class="secciones col-6">
                 <a href="#sobre-mi">Sobre Mi</a>
-                <a href="#">Experiencia</a>
-                <a href="#">Proyectos</a>
-                <a href="#">Contacto</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contactos">Contacto</a>
             </nav>
+            <h3 v-else class="titulo-pagina col-6">
+                {{ viewName }}
+            </h3>
 
         </div>
     </header>
 </template>
 
-<script setup>
-
+<script>
+export default {
+    computed: {
+        viewName() {
+            return this.$route.name
+        }
+    }
+}
 </script>
 
 <style scoped lang="scss">
@@ -47,6 +56,13 @@ header {
             border-radius: 100%;
             transform: translate(0, 3px);
         }
+
+        a{
+            color: inherit;
+            &::before{
+                display: none;
+            } 
+        }
     }
 }
 
@@ -65,5 +81,12 @@ header {
             background: #c376ff;
         }
     }
+}
+
+.titulo-pagina {
+    text-align: right;
+    text-transform: capitalize;
+    color: white;
+    padding: 0.5em;
 }
 </style>

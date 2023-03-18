@@ -13,9 +13,9 @@
 
             <nav class="secciones col-6">
                 <a href="#sobre-mi">Sobre Mi</a>
-                <a href="#">Experiencia</a>
-                <a href="#">Proyectos</a>
-                <a href="#">Contacto</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contactos">Contacto</a>
             </nav>
 
         </div>

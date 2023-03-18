@@ -8,17 +8,27 @@
             </div>
 
             <div class="elemento-texto">
-                <p class="texto">Excepteur eu ullamco sunt est dolore dolore ea. Labore qui ea ut sint consequat. Laboris
-                    deserunt sint enim quis esse aliquip deserunt nisi voluptate enim sit culpa et voluptate. Reprehenderit
-                    cillum occaecat veniam est sint. Cupidatat adipisicing tempor ad occaecat. Eiusmod sunt commodo proident
-                    nisi laboris sint. Aute fugiat aliquip dolor Lorem officia nulla in pariatur aute non elit duis.</p>
+                <p class="texto">
+                    ¡Mi nombre es <strong> Yessenia Colocho</strong>!<br>
+                    <br>
+                    <strong>Soy una maquetadora y diseñadora UX y Web. </strong><br>
+                    <br>
+                    Estudié diseño publicitario y llevo este último año ampliando mis conocimientos y metiéndome a fondo en
+                    el campo del desarrollo web.
+                    Mis especialidades engloban el diseño enfocado a UX de interfaces y aplicaciones, así como el maquetado
+                    de las mismas, con tecnologías como Figma, Adobe Illustrator, HTML, CSS, Node y Vue.
+                    Me gusta el trabajo en equipo y ampliar mis conocimientos en el ámbito laboral, colaborando en proyectos
+                    interesantes.<br>
+                    <br>
+                    Si quieres saber más… ¡Sigue bajando!
+                </p>
             </div>
 
         </section>
 
-        <section class="experiencia-y-redonda container">
+        <section id="experiencia" class="experiencia-y-redonda container">
             <div class="row">
-                <div class="experiencia col-7">
+                <div class="experiencia col-7 ocultar">
 
                     <BarraExperiencia :key="barra.nombre" v-for="barra in barrasDeExperiencia" v-bind="barra">
                     </BarraExperiencia>
@@ -29,16 +39,24 @@
 
                     <div class="bordes-circulo"></div>
 
-                    <div class="circulo">
+                    <div class="circulo ocultar-derecha">
                         <div class="arco"></div>
                         <div class="arco inferior"></div>
                         <p>
-                            Nostrud deserunt commodo mollit magna reprehenderit ipsum aliqua cupidatat ipsum est duis non
-                            laboris elit. Id aliquip nisi consectetur laboris nulla Lorem ex amet sunt consequat pariatur
-                            adipisicing elit. Adipisicing labore deserunt in pariatur ea amet consectetur commodo. Qui duis
-                            dolore non cupidatat exercitation velit. Lorem proident exercitation exercitation qui eiusmod ut
-                            elit elit sit incididunt ea ad. Mollit occaecat eu voluptate enim aute labore et incididunt.
-                            Cupidatat ex incididunt sint exercitation culpa sunt esse.
+                            Mis estudios son diversos, pero siempre enfocados al diseño. Realicé mis estudios superiores de
+                            Diseño publicitario en la escuela EAM - Leandre Cristòfol, Lleida, en 2018.<br><br>
+                            Durante el curso manejé el uso del paquete Adobe, en especial Illustrator y Photoshop. Las leyes
+                            y propiedades del color, lettering, maquetación y layouting, con el fin de proporcionar
+                            productos atractivos y comunicativos, en una multitud de ámbitos profesionales y sectores.<br><br>
+                            Partiendo de estos conocimientos, expandí mi abanico formándome en diseño web enfocado al UX/UI.
+                            En el camino aprendí a utilizar herramientas de Mockup como Figma, para realizar diversos
+                            prototipos de aplicaciones.<br><br>
+                            Luego, he ido aprendiendo y dominando el desarrollo web. Primero con HTML5 y CSS3 (también
+                            supersets como SCSS), maquetando diversos tipos de webs y aplicaciones. Expandiendo estas
+                            habilidades, profundicé en el estudio de Frameworks de Node, en concreto Vue. Sabiendo trabajar
+                            en este entorno.<br><br>
+                            En estos momentos, me sigo formando en JS, PHP, React y Wordpress, para en un futuro, añadirlos
+                            a mí curriculum.
                         </p>
                     </div>
 
@@ -48,7 +66,7 @@
 
         </section>
 
-        <section class="otros">
+        <section class="otros ocultar">
             <h4 class="linea-animada">
                 Otros
             </h4>
@@ -57,21 +75,17 @@
                 <div class="row">
 
                     <div class="lado-derecho col-4">
-                        <div v-for="imagen in experienciaOtros.diseno">
-                            <img :src="imagen" />
-                        </div>
+                        <ExperienciaInfo v-for="experiencia in experienciaOtros.diseno" v-bind="experiencia">
+                        </ExperienciaInfo>
                     </div>
 
                     <div class="lado-medio col-4">
-                        <div v-for="imagen in experienciaOtros.tecnologia">
-                            <img :src="imagen" />
-                        </div>
+                        <ExperienciaInfo v-for="tecnologia in experienciaOtros.tecnologia" v-bind="tecnologia">
+                        </ExperienciaInfo>
                     </div>
 
                     <div class="lado-izquierdo col-4">
-                        <div v-for="imagen in experienciaOtros.otros">
-                            <img :src="imagen" />
-                        </div>
+                        <ExperienciaInfo v-for="otro in experienciaOtros.otros" v-bind="otro"></ExperienciaInfo>
                     </div>
 
                 </div>
@@ -80,34 +94,12 @@
 
         </section>
 
-        <section class="proyectos">
-
+        <section id="proyectos" class="proyectos ocultar-abajo">
 
             <h3>Proyectos</h3>
 
-            <div class="proyeco-uno container">
-                <div class="row">
-                    <div class="imagen-principal borde-esquina col-6">
-                        <img src="aula-virtual-principal.png" />
-
-                        <p>Aula Virtual</p>
-                    </div>
-
-                    <div class="imagenes-secundarias col-6">
-                        <div>
-                            <img src="aula-virtual-1.png" />
-                        </div>
-                        <div>
-                            <img src="aula-virtual-2.png" />
-                        </div>
-                        <div>
-                            <img src="aula-virtual-3.png" />
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
+            <Proyectos v-for="proyecto, index in proyectosHome" v-bind="proyecto" :key="`${index}-${proyecto.titulo}`">
+            </Proyectos>
 
         </section>
 
@@ -115,28 +107,29 @@
 
             <div class="boton-final">
                 <div class="borde-esquina-invertido">
-                    <button>Todos los proyectos</button>
+                    <a href="/proyectos">Todos los proyectos</a>
                 </div>
             </div>
         </section>
 
-        <section class="contactos">
+        <section id="contactos" class="contactos">
             <div>
                 <h4>Muchas gracias por llegar hasta aqui, puedes contactarme usando los siguientes <b>links</b></h4>
             </div>
 
-            <div class="imagen-correo">
+            <div class="imagen-correo ocultar">
                 <div>
                     <img src="correo.png" />
                 </div>
 
                 <div class="texto-correo">
                     <div>
-                        Colocho.Yessenia@gmail.com
+                        <a href="mailto:colocho.yessenia@gmail.com">Colocho.Yessenia@gmail.com</a>
                     </div>
 
                     <div>
-                        Linkeding / YesseniaColochoG
+                        <a href="https://www.linkedin.com/in/yessenia-colocho-330654160/" target="_blank"> Linkedin /
+                            Yessenia Colocho</a>
                     </div>
 
                 </div>
@@ -155,16 +148,52 @@ import BarraExperiencia from '../components/BarraExperiencia.vue';
 import barrasDeExperienia from '../experiencia/barrasDeExperienia';
 import experienciaOtros from '../experiencia/experienciaOtros';
 import BarraInferior from '../components/BarraInferior.vue';
+import Proyectos from '../components/Proyectos.vue';
+import proyectosExperiencia from '../experiencia/proyectosExperiencia';
+import ExperienciaInfo from '../components/ExperienciaInfo.vue';
 </script>
 
 <script>
 export default {
     computed: {
         barrasDeExperiencia() {
-            return barrasDeExperienia
+            return barrasDeExperienia;
         },
         experienciaOtros() {
-            return experienciaOtros
+            return experienciaOtros;
+        },
+        proyectosHome() {
+            return proyectosExperiencia.filter((proyecto) => proyecto.mostrarEnHome === true)
+        }
+    },
+    components: { Proyectos, ExperienciaInfo, ExperienciaInfo },
+
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    unmounted() {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+        handleScroll() {
+            console.log(window.scrollY)
+            let experiencia = 300
+            if (experiencia < window.scrollY) {
+                document.querySelector('.experiencia').classList.remove("ocultar");
+                document.querySelector('.circulo').classList.remove("ocultar-derecha");
+            }
+            let otro = 850
+            if (otro < window.scrollY) {
+                document.querySelector('.otros').classList.remove('ocultar')
+            }
+            let proyectos = 1200
+            if (proyectos < window.scrollY) {
+                document.querySelector('.proyectos').classList.remove('ocultar-abajo')
+            }
+            let correo = 2500
+            if (correo < window.scrollY) {
+                document.querySelector('.imagen-correo').classList.remove('ocultar')
+            }
         }
     }
 }
@@ -207,7 +236,7 @@ export default {
         p {
             font-family: 'Galyon';
             transform: rotate(-3deg);
-            font-size: 13px;
+            font-size: 14px;
         }
     }
 }
@@ -219,7 +248,9 @@ section {
 .experiencia-y-redonda {
     margin-top: 100px;
 
-    .experiencia {}
+    .experiencia {
+        transition: all 0.8s;
+    }
 
     .redonda {
         height: 0;
@@ -233,13 +264,15 @@ section {
             border-radius: 100%;
             transform: translateY(-15%);
             position: relative;
+            transition: all 0.8s;
 
             p {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                width: 50%;
+                width: 55%;
                 margin-left: 20%;
+                font-size: small;
             }
 
             .arco {
@@ -256,6 +289,7 @@ section {
 .otros {
     padding: 0 50px !important;
     margin-top: 110px;
+    transition: all 0.8s;
 
     h4 {
         display: inline-block;
@@ -281,17 +315,7 @@ section {
             >div {
                 >div {
                     width: 50%;
-                    padding-bottom: 50%;
                     position: relative;
-                    overflow: hidden;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        padding: 10px;
-                        object-fit: contain;
-                        position: absolute;
-                    }
                 }
             }
         }
@@ -322,63 +346,13 @@ section {
 
 }
 
+
 .proyectos {
     margin-top: 70px;
+    transition: all 0.8s;
 
     h3 {
         font-family: 'Galyon';
-    }
-
-    .proyeco-uno {
-        margin-top: 30px;
-        height: auto;
-
-        .borde-esquina {
-
-            &::after,
-            &::before {
-                border-color: #C376FF;
-                border-width: 3px;
-            }
-        }
-
-        .imagen-principal {
-            img {
-                width: 100%;
-                padding: 20px;
-            }
-
-            p {
-                padding-left: 20px;
-                font-family: 'Galyon';
-                margin: 0;
-                margin-top: 10px;
-            }
-        }
-    }
-
-    .imagenes-secundarias {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 20px;
-
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 70%;
-            overflow: hidden;
-            height: 110px;
-
-            img {
-                width: 100%;
-            }
-        }
-
-
-
     }
 }
 
@@ -399,11 +373,13 @@ section {
         >div {
             transform: rotate(-4deg);
 
-            button {
+            a {
                 padding: 15px;
                 font-family: 'Galyon';
                 font-size: 13px;
                 background: none;
+                color: black;
+                display: inherit;
 
                 &::before {
                     content: '';
@@ -445,6 +421,7 @@ section {
         margin-bottom: 50px;
         display: flex;
         justify-content: center;
+        transition: all 0.8s;
     }
 
     img {
@@ -463,6 +440,20 @@ section {
     }
 }
 
+.ocultar {
+    opacity: 0;
+    transform: translateX(-10%);
+}
+
+.ocultar-derecha {
+    opacity: 0;
+    transform: translateX(10%) !important;
+}
+
+.ocultar-abajo {
+    opacity: 0;
+    transform: translateY(10%) !important;
+}
 
 
 
@@ -523,4 +514,15 @@ section {
     }
 }
 </style>
+
+<style lang="scss">
+.proyeco-uno {
+    margin-bottom: 80px;
+
+    &:nth-child(odd) {
+        .row {
+            flex-direction: row-reverse;
+        }
+    }
+}</style>
 
