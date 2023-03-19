@@ -4,7 +4,7 @@
     <main class="main">
         <section id="sobre-mi" class="elemento-superior">
             <div class="fotografia">
-                <img src="tarashif.jpg" />
+                <img src="/atarashif.jpg" />
             </div>
 
             <div class="elemento-texto">
