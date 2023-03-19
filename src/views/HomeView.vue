@@ -4,7 +4,7 @@
     <main class="main">
         <section id="sobre-mi" class="elemento-superior">
             <div class="fotografia">
-                <img src="atarashif.jpg" />
+                <img src="tarashif.jpg" />
             </div>
 
             <div class="elemento-texto">
@@ -47,7 +47,8 @@
                             Diseño publicitario en la escuela EAM - Leandre Cristòfol, Lleida, en 2018.<br><br>
                             Durante el curso manejé el uso del paquete Adobe, en especial Illustrator y Photoshop. Las leyes
                             y propiedades del color, lettering, maquetación y layouting, con el fin de proporcionar
-                            productos atractivos y comunicativos, en una multitud de ámbitos profesionales y sectores.<br><br>
+                            productos atractivos y comunicativos, en una multitud de ámbitos profesionales y
+                            sectores.<br><br>
                             Partiendo de estos conocimientos, expandí mi abanico formándome en diseño web enfocado al UX/UI.
                             En el camino aprendí a utilizar herramientas de Mockup como Figma, para realizar diversos
                             prototipos de aplicaciones.<br><br>
@@ -119,7 +120,7 @@
 
             <div class="imagen-correo ocultar">
                 <div>
-                    <img src="correo.png" />
+                    <img src="/correo.png" />
                 </div>
 
                 <div class="texto-correo">
@@ -524,5 +525,6 @@ section {
             flex-direction: row-reverse;
         }
     }
-}</style>
+}
+</style>
 

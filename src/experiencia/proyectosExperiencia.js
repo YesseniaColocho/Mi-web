@@ -8,7 +8,8 @@ export default [
             'aula-virtual-2.png',
             'aula-virtual-3.png'
         ],
-        mostrarEnHome: true
+        mostrarEnHome: true,
+        link: 'https://aula-virtual-yc.web.app/'
     },
     {
         titulo: 'Web marca de musica',
@@ -19,7 +20,8 @@ export default [
             'proyecto-1-2.png',
             'proyecto-1-3.png'
         ],
-        mostrarEnHome: false
+        mostrarEnHome: false,
+        link: 'https://maquetas-web-y.web.app/proyecto1'
     },
     {
         titulo: 'Maquetación página Plans & Pricing',
@@ -29,16 +31,18 @@ export default [
             'proyecto-2-1.png',
             'proyecto-2-2.png',
         ],
-        mostrarEnHome: false
+        mostrarEnHome: false,
+        link: 'https://maquetas-web-y.web.app/proyecto2'
     },
     {
         titulo: 'Maquetación album Gorillaz',
-        descripcion: 'Maquetado de una landing page para la publicación de un album. El diseño está inspirado en diversas landing pages del mismo tipo. Incluye una lista de pistas, una sección de recomendados y menús laterales.',
+        descripcion: 'Maquetado de una landing page para la publicación de un álbum. El diseño está inspirado en diversas landing pages del mismo tipo. Incluye una lista de pistas, una sección de recomendados y menús laterales.',
         imagenPrincipal: 'proyecto-3-portada.png',
         imagenes: [
             'proyecto-3-1.png',
             'proyecto-3-2.png',
         ],
-        mostrarEnHome: true
+        mostrarEnHome: true,
+        link: 'https://maquetas-web-y.web.app/proyecto3'
     }
 ]

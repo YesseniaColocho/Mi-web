@@ -1,7 +1,7 @@
 <template>
     <div class="barra-experiencia">
         <div class="logo">
-            <img :src="imagen" />
+            <img :src="`/${imagen}`" />
         </div>
 
         <div class="barra">

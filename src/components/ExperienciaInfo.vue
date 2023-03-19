@@ -2,13 +2,13 @@
     <div class="experiencia-info">
 
         <div @mouseover="hover = true" @mouseleave="hover = false" class="logo">
-            <img :src="img" />
+            <img :src="`/${img}`" />
         </div>
 
         <Transition>
             <div v-if="hover" class="ficha" @mouseover="hover = true" @mouseleave="hover = false">
                 <div class="uno">
-                    <img :src="img" />
+                    <img :src="`/${img}`" />
                 </div>
 
                 <div class="dos">

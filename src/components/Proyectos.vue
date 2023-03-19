@@ -2,17 +2,17 @@
     <div class="proyeco-uno container">
         <div class="row">
             <div class="imagen-principal borde-esquina col-6">
-                <img :src='imagenPrincipal' />
+                <img :src='imagenPrincipal' @click="irA(link)" />
 
-                <p>{{ titulo }}</p>
+                <a :href="link" target="_blank">{{ titulo }}</a>
                 <p class="descripcion" v-if="descripcion">{{ descripcion }}</p>
             </div>
 
             <div class="imagenes-secundarias col-6">
 
-                <div v-for="imagen, index in imagenes.slice(0,2)" :class="{ 'activo': imagenActivaCarrusel === index }" @mouseover="manejarHover(index)"
-                    @mouseleave="hover = false">
-                    <img :src="imagen" />
+                <div v-for="imagen, index in imagenes.slice(0, 2)" :class="{ 'activo': imagenActivaCarrusel === index }"
+                    @mouseover="manejarHover(index)" @mouseleave="hover = false" @click="irA(link)">
+                    <img :src="`/${imagen}`" />
                 </div>
             </div>
         </div>
@@ -40,6 +40,9 @@ export default {
         },
         descripcion: {
             type: String
+        },
+        link: {
+            type: String
         }
     },
     mounted() {
@@ -60,6 +63,10 @@ export default {
         },
         cambioPagina(numeroPagina) {
             this.imagenActivaCarrusel = numeroPagina
+        },
+        irA(link) {
+            window.open(link, '_blank');
+
         }
     }
 }
@@ -83,6 +90,13 @@ export default {
         img {
             width: 100%;
             padding: 20px;
+            cursor: pointer
+        }
+
+        a {
+            color: inherit;
+            padding-left: 20px;
+            display: inline-block
         }
 
         p {
@@ -106,10 +120,10 @@ export default {
         justify-content: center;
         align-items: center;
         width: 70%;
-        overflow: hidden;
-        height: 185px;
+        height: 50%;
         opacity: 0.5;
         transform: scale(0.9);
+        cursor: pointer;
         transition: all 1s;
 
         &.activo {
@@ -119,10 +133,12 @@ export default {
 
         img {
             width: 100%;
+            box-shadow: 5px 5px 18px #00000021;
         }
     }
 }
-.descripcion{
+
+.descripcion {
     font-size: 14px;
     padding: 0 20px 20px 0;
 }
