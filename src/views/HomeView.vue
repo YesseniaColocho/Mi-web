@@ -4,7 +4,7 @@
     <main class="main">
         <section id="sobre-mi" class="elemento-superior">
             <div class="fotografia">
-                <img src="/atarashif.jpg" />
+                <img src="/foto-yessenia.png" />
             </div>
 
             <div class="elemento-texto">
@@ -177,21 +177,20 @@ export default {
     },
     methods: {
         handleScroll() {
-            console.log(window.scrollY)
             let experiencia = 300
             if (experiencia < window.scrollY) {
                 document.querySelector('.experiencia').classList.remove("ocultar");
                 document.querySelector('.circulo').classList.remove("ocultar-derecha");
             }
-            let otro = 850
+            let otro = 700
             if (otro < window.scrollY) {
                 document.querySelector('.otros').classList.remove('ocultar')
             }
-            let proyectos = 1200
+            let proyectos = 1000
             if (proyectos < window.scrollY) {
                 document.querySelector('.proyectos').classList.remove('ocultar-abajo')
             }
-            let correo = 2500
+            let correo = 2600
             if (correo < window.scrollY) {
                 document.querySelector('.imagen-correo').classList.remove('ocultar')
             }
@@ -214,6 +213,7 @@ export default {
         width: 400px;
         transform: translateX(0%);
         animation: 2s imagenAparecer;
+        z-index: 1;
 
         img {
             height: 100%;
@@ -230,7 +230,6 @@ export default {
         padding: 70px 320px;
         position: absolute;
         right: -200px;
-        z-index: -1;
         transform: rotate(3deg);
         animation: 2s bloqueAparecer;
 
