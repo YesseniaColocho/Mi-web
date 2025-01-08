@@ -44,5 +44,27 @@ export default [
         ],
         mostrarEnHome: true,
         link: 'https://maquetas-web-y.web.app/proyecto3'
+    },
+    {
+        titulo: 'Funciones Javascript',
+        descripcion: 'Pequeña web donde implemento mis propios componentes de Javascript: Animación de fondo en función de la posición del ratón, carruseles interactivos, etc.',
+        imagenPrincipal: 'proyecto4-portada.png',
+        imagenes: [
+            'proyecto4-1.png',
+            'proyecto4-2.png',
+        ],
+        mostrarEnHome: true,
+        link: 'https://maquetas-web-y.web.app/proyecto4'
+    },
+    {
+        titulo: 'Landing Clothing Brand',
+        descripcion: 'Pequeña landing para sitio web de moda y ropa japonesa. Uso de diseño no guiado por grids. Flotante.',
+        imagenPrincipal: 'proyecto5-portada.png',
+        imagenes: [
+            'proyecto5-1.png',
+            'proyecto5-2.png',
+        ],
+        mostrarEnHome: true,
+        link: 'https://maquetas-web-y.web.app/proyecto5'
     }
 ]
