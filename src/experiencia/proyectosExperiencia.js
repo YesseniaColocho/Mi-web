@@ -66,5 +66,16 @@ export default [
         ],
         mostrarEnHome: true,
         link: 'https://maquetas-web-y.web.app/proyecto5'
-    }
+    },
+    {
+        titulo: 'Album de imagenes',
+        descripcion: 'Pequeño POC que carga un grid imagenes a partir de un jSON llamado asincronamente.',
+        imagenPrincipal: 'proyecto-grid.png',
+        imagenes: [
+            'proyecto-grid-1.png',
+            'proyecto-grid-2.png'
+        ],
+        mostrarEnHome: false,
+        link: 'https://yesseniacolocho.github.io/image-api-grid-loader-azertium/'
+    },
 ]
