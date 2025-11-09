@@ -34,7 +34,7 @@
         <li>
           <a
             class="line"
-            href="https://www.linkedin.com/in/yessenia-colocho-330654160/"
+            href="https://www.linkedin.com/in/yessenia-colocho/"
             target="_blank"
           >
             <b>Linkedin</b>: Yessenia Colocho</a
@@ -79,7 +79,7 @@ ul {
   margin-top: 5px;
   padding-left: 10px;
   li {
-    margin-top: 10px;
+    margin-top: 5px;
     list-style: none;
   }
 }
@@ -107,6 +107,7 @@ a {
   }
   h2,
   li {
+    padding: 2px;
     color: grey;
     font-size: 0.8em;
     transition: all 0.5s ease;
@@ -123,6 +124,7 @@ a {
 }
 
 .float-text {
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -136,6 +138,14 @@ a {
   left: 150px;
   box-shadow: 20px 20px 30px $shadowColor;
   font-size: 0.9em;
+
+  @media only screen and (max-width: 500px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 20px);
+  }
+
   h1 {
     font-size: 1.2em;
   }
