@@ -4,7 +4,7 @@
             <div class="imagen-principal borde-esquina col-6">
                 <img :src='imagenPrincipal' @click="irA(link)" />
 
-                <a :href="link" target="_blank">{{ titulo }}</a>
+                <a class="line" :href="link" target="_blank">{{ titulo }}</a>
                 <p class="descripcion" v-if="descripcion">{{ descripcion }}</p>
             </div>
 
