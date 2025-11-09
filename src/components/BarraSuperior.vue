@@ -7,10 +7,10 @@
             </div>
 
             <nav v-if="viewName === 'home'" class="secciones col-6">
-                <a href="#sobre-mi">Sobre Mi</a>
-                <a href="#experiencia">Experiencia</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#contactos">Contacto</a>
+                <a class="line" href="#sobre-mi">Sobre Mi</a>
+                <a class="line" href="#experiencia">Experiencia</a>
+                <a class="line" href="#proyectos">Proyectos</a>
+                <a class="line" href="#contactos">Contacto</a>
             </nav>
             <h3 v-else class="titulo-pagina col-6">
                 {{ viewName }}
